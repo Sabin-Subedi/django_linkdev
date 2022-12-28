@@ -12,6 +12,8 @@ services:
       - linkdev_local_postgres_backups:/backups
     restart: always
 volumes:
-  linkdev_local_postgres_data: {}
-  linkdev_local_postgres_backups: {}
+  linkdev_local_postgres_data: 
+    driver: local
+  linkdev_local_postgres_backups: 
+    driver: local
     
