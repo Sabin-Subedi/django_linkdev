@@ -1,0 +1,17 @@
+version: '3.0'
+
+services:
+  postgres:
+    image: postgres:14
+    ports:
+      - "5480:5432"
+    env_file:
+      - .postgres
+    volumes:
+      - linkdev_local_postgres_data:/var/lib/postgresql/data
+      - linkdev_local_postgres_backups:/backups
+    restart: always
+volumes:
+  linkdev_local_postgres_data: {}
+  linkdev_local_postgres_backups: {}
+    
