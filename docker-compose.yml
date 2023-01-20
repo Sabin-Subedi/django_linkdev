@@ -14,6 +14,8 @@ services:
 volumes:
   linkdev_local_postgres_data: 
     driver: local
+    
   linkdev_local_postgres_backups: 
     driver: local
+  
     
